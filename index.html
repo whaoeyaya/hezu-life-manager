@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>合住｜合租生活管家</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#20253a;--muted:#7e8499;--line:#eceef5;--purple:#7466f0;--lav:#efedff;--green:#1c9b78;--orange:#f1a34b;--red:#e46e75}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:10px 14px;background:var(--purple);color:white;font-weight:650}button.ghost{background:#f1f2f8;color:#555b70}button.small{padding:6px 10px;font-size:12px}.app{display:flex;min-height:100vh}.sidebar{width:230px;background:#fff;border-right:1px solid var(--line);padding:28px 18px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:850;letter-spacing:-.5px;padding:0 8px}.logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#958bff,#6555e8);display:grid;place-items:center;color:#fff;font-size:20px}.house{padding:16px;border-radius:16px;background:#f7f6ff;border:1px solid #eeebff}.house small{color:var(--muted)}.house strong{display:block;font-size:15px;margin:4px 0}.nav{display:grid;gap:7px}.nav button{display:flex;align-items:center;gap:12px;text-align:left;background:transparent;color:#6c7185;font-weight:600;padding:12px 14px}.nav button.active{background:var(--lav);color:var(--purple)}.nav .ico{font-size:17px;width:22px;text-align:center}.sidefoot{margin-top:auto;color:var(--muted);font-size:12px;padding:10px}.main{flex:1;min-width:0;padding:30px clamp(18px,4vw,48px);max-width:1600px;margin:0 auto;width:100%}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:28px}.eyebrow{color:var(--purple);font-weight:750;font-size:12px;letter-spacing:1px}.top h1{font-size:28px;margin:5px 0 0;letter-spacing:-.7px}.top p{margin:4px 0;color:var(--muted)}.avatar{width:42px;height:42px;border-radius:50%;background:#ffe2cb;display:grid;place-items:center;font-size:20px;flex-shrink:0}.topright{display:flex;align-items:center;gap:12px}.welcome{display:flex;align-items:center;gap:10px}.welcome span{display:block;color:var(--muted);font-size:12px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:22px}.stat,.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 4px 20px rgba(35,38,75,.025)}.stathead{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;font-weight:650}.stat-icon{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-size:18px}.s-purple{background:#efedff}.s-green{background:#e2f7ef}.s-orange{background:#fff1df}.s-pink{background:#ffeaed}.stat strong{font-size:26px;display:block;margin:12px 0 3px;letter-spacing:-.5px}.stat .hint{font-size:12px;color:var(--muted)}.up{color:var(--green);font-weight:700}.content{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.9fr);gap:18px;align-items:start}.stack{display:grid;gap:18px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.panel-head h2{margin:0;font-size:16px}.panel-head p{margin:4px 0 0;color:var(--muted);font-size:12px}.link{background:transparent;color:var(--purple);padding:4px;font-size:12px}.balance{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(110deg,#f5f3ff,#faf9ff);padding:17px;border-radius:14px;margin-bottom:15px}.balance small{color:var(--muted)}.balance strong{display:block;font-size:24px;margin-top:4px}.balance .mini{color:var(--purple);font-size:12px;font-weight:700}.rowitem{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid var(--line)}.rowitem:last-child{border-bottom:0;padding-bottom:0}.person{width:38px;height:38px;border-radius:13px;background:#f2f0ff;display:grid;place-items:center;font-size:18px;flex-shrink:0}.itembody{flex:1;min-width:0}.itembody strong{display:block;font-size:13px}.itembody small{display:block;color:var(--muted);margin-top:3px;font-size:11px}.amount{text-align:right;font-weight:750;white-space:nowrap}.amount small{display:block;font-weight:500;color:var(--muted);font-size:11px}.pill{border-radius:20px;padding:4px 8px;font-size:11px;font-weight:700;white-space:nowrap}.pill.done{background:#e5f8f0;color:#188665}.pill.pending{background:#fff1df;color:#b87422}.pill.info{background:#efedff;color:#6d5de7}.schedule{display:grid;gap:12px}.day{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;padding:12px;border-radius:13px;background:#fafaff;border:1px solid #f0effb}.datebox{background:#fff;border:1px solid var(--line);border-radius:10px;text-align:center;padding:6px}.datebox small{display:block;color:var(--muted);font-size:10px}.datebox strong{font-size:17px}.tasktitle{font-weight:700;font-size:13px}.taskmeta{font-size:11px;color:var(--muted);margin-top:3px}.supply{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid var(--line)}.supply:last-child{border-bottom:0}.supply .person{background:#fff4e6}.progress{height:5px;background:#f0f1f6;border-radius:9px;margin-top:7px;overflow:hidden}.progress span{display:block;height:100%;background:var(--orange);border-radius:9px}.rule{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}.rule:last-child{border:0}.check{width:22px;height:22px;border-radius:7px;background:#e7f8f0;color:#169b75;display:grid;place-items:center;flex-shrink:0}.rule strong{font-size:13px}.rule small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.view{display:none}.view.active{display:block}.section-intro{margin-bottom:18px}.section-intro h2{font-size:22px;margin:0 0 5px}.section-intro p{margin:0;color:var(--muted)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}.toolbar input,.toolbar select,.formrow input,.formrow select,.formrow textarea{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:white;color:var(--ink);min-width:0}.toolbar input{flex:1;min-width:160px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:540px}th,td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);font-size:12px}th{color:var(--muted);font-weight:650}td{font-weight:550}.empty{text-align:center;color:var(--muted);padding:30px}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}.formrow label{display:grid;gap:6px;color:var(--muted);font-size:12px}.formrow .wide{grid-column:1/-1}.modalback{position:fixed;inset:0;background:#1c204755;display:none;align-items:center;justify-content:center;padding:20px;z-index:5}.modalback.open{display:flex}.modal{background:#fff;border-radius:18px;padding:24px;width:min(480px,100%);box-shadow:0 20px 70px #1d204733}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.modalhead h3{margin:0;font-size:18px}.close{background:#f1f2f8;color:#62677a;padding:5px 10px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#252840;color:#fff;padding:11px 17px;border-radius:12px;transition:.2s;z-index:9;box-shadow:0 10px 30px #0002}.toast.show{opacity:1;transform:translate(-50%,0)}.mobilemenu{display:none}
+@media(max-width:1050px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.content{grid-template-columns:1fr}.sidebar{width:200px}.main{padding:24px}}
+@media(max-width:700px){.app{display:block}.sidebar{width:100%;padding:14px 16px;border-right:0;border-bottom:1px solid var(--line);gap:12px}.brand{font-size:17px}.logo{width:32px;height:32px}.house,.sidefoot{display:none}.nav{display:flex;overflow-x:auto;gap:4px}.nav button{white-space:nowrap;padding:9px 10px;font-size:12px}.nav .ico{width:auto}.main{padding:22px 14px}.top h1{font-size:23px}.topright .welcome div{display:none}.stats{gap:10px}.stat{padding:14px}.stat strong{font-size:22px}.stathead{font-size:11px}.stat-icon{width:30px;height:30px}.panel{padding:16px}.formrow{grid-template-columns:1fr}.formrow .wide{grid-column:auto}.day{grid-template-columns:48px 1fr auto}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+ <div class="brand"><div class="logo">⌂</div>合住 <span style="font-size:11px;color:#9699aa;font-weight:600">CO-LIVING</span></div>
+ <div class="house"><small>当前合租空间</small><strong>🌿 春日合住小屋</strong><small>3 位室友 · 一起住得更舒服</small></div>
+ <nav class="nav" id="nav">
+  <button class="active" data-view="dashboard"><span class="ico">▦</span>生活总览</button>
+  <button data-view="expenses"><span class="ico">￥</span>费用 AA</button>
+  <button data-view="cleaning"><span class="ico">✧</span>清洁值日</button>
+  <button data-view="supplies"><span class="ico">♧</span>公共物品</button>
+  <button data-view="rules"><span class="ico">♡</span>室友公约</button>
+ </nav>
+ <div class="sidefoot">让合租更轻松，让关系更简单。<br>Made for better living ✦</div>
+</aside>
+<main class="main">
+<header class="top"><div><div class="eyebrow" id="eyebrow">YOUR HOME, IN HARMONY</div><h1 id="pageTitle">把合租生活，安排得明明白白。</h1><p id="pageSub">账目清楚一点，室友关系就轻松一点。</p></div><div class="topright"><button class="ghost" id="quickAdd">＋ 记一笔</button><div class="welcome"><div class="avatar">🐱</div><div><strong>小颜</strong><span>今天也要好好合住</span></div></div></div></header>
+<section class="view active" id="dashboard">
+ <div class="stats">
+  <div class="stat"><div class="stathead">本月人均支出 <span class="stat-icon s-purple">￥</span></div><strong id="statExpense">¥ 836.50</strong><div class="hint"><span class="up">↓ 8.2%</span> 较上月</div></div>
+  <div class="stat"><div class="stathead">待结清费用 <span class="stat-icon s-orange">↔</span></div><strong id="statPending">¥ 126.00</strong><div class="hint">记清每一笔，不尴尬催账</div></div>
+  <div class="stat"><div class="stathead">本周清洁任务 <span class="stat-icon s-green">✧</span></div><strong id="statCleaning">3 项</strong><div class="hint">按排班轮流来，公平又省心</div></div>
+  <div class="stat"><div class="stathead">待补充物品 <span class="stat-icon s-pink">♧</span></div><strong id="statSupply">2 件</strong><div class="hint">低库存及时提醒，不再临时抓瞎</div></div>
+ </div>
+ <div class="content">
+  <div class="stack">
+   <div class="panel"><div class="panel-head"><div><h2>💸 费用动态</h2><p>最近的公共开支，一眼看清</p></div><button class="link" data-go="expenses">查看全部 →</button></div>
+    <div class="balance"><div><small>本月公共开支</small><strong id="totalExpense">¥ 2,509.50</strong></div><span class="mini">3 位室友共同承担</span></div><div id="recentExpenses"></div>
+   </div>
+   <div class="panel"><div class="panel-head"><div><h2>🧹 本周值日表</h2><p>轮值有安排，公共区域一起维护</p></div><button class="link" data-go="cleaning">完整排班 →</button></div><div class="schedule" id="dashSchedule"></div></div>
+  </div>
+  <div class="stack">
+   <div class="panel"><div class="panel-head"><div><h2>🧻 公共物品提醒</h2><p>库存不足时，提前补货</p></div><button class="link" data-go="supplies">管理物品 →</button></div><div id="dashSupplies"></div></div>
+   <div class="panel"><div class="panel-head"><div><h2>🤝 我们的室友公约</h2><p>把默契写下来，减少不必要的误会</p></div><button class="link" data-go="rules">查看公约 →</button></div><div id="dashRules"></div></div>
+   <div class="panel" style="background:linear-gradient(130deg,#7568ef,#9588ff);color:#fff;border:0"><div style="font-size:12px;opacity:.8;font-weight:700">LIVING TIP · 今日小贴士</div><h2 style="font-size:18px;line-height:1.5;margin:10px 0">把问题说清楚，<br>比把情绪憋住更重要。</h2><p style="opacity:.8;font-size:12px;margin:0">公共开支记得及时登记，所有室友都能看见。</p></div>
+  </div>
+ </div>
+</section>
+<section class="view" id="expenses"><div class="section-intro"><h2>费用 AA</h2><p>公共开支公开透明，自动计算每位室友的均摊金额。</p></div><div class="panel"><div class="panel-head"><div><h2>公共费用明细</h2><p>示例数据可直接编辑和新增</p></div><button data-add="expense">＋ 新增费用</button></div><div class="toolbar"><input id="expenseSearch" placeholder="搜索费用名称或记录人…"><select id="expenseFilter"><option value="all">全部状态</option><option value="pending">待结清</option><option value="done">已结清</option></select></div><div class="tablewrap"><table><thead><tr><th>费用项目</th><th>日期</th><th>支付人</th><th>总金额</th><th>人均</th><th>状态</th><th>操作</th></tr></thead><tbody id="expenseRows"></tbody></table></div></div></section>
+<section class="view" id="cleaning"><div class="section-intro"><h2>清洁值日</h2><p>轮流负责公共区域，支持标记完成，让家务分工更公平。</p></div><div class="panel"><div class="panel-head"><div><h2>本周轮值安排</h2><p>按日期查看任务与负责人</p></div><button data-add="cleaning">＋ 添加值日</button></div><div class="schedule" id="allSchedule"></div></div></section>
+<section class="view" id="supplies"><div class="section-intro"><h2>公共物品</h2><p>记录谁买了什么、还剩多少，低库存及时提醒补货。</p></div><div class="panel"><div class="panel-head"><div><h2>公共物品清单</h2><p>库存低于提醒阈值时自动标记</p></div><button data-add="supply">＋ 登记物品</button></div><div class="tablewrap"><table><thead><tr><th>物品</th><th>当前库存</th><th>提醒阈值</th><th>最近购买人</th><th>状态</th><th>操作</th></tr></thead><tbody id="supplyRows"></tbody></table></div></div></section>
+<section class="view" id="rules"><div class="section-intro"><h2>室友公约</h2><p>一起制定、共同遵守；有共识的生活规则，不靠猜。</p></div><div class="panel"><div class="panel-head"><div><h2>我们的共同约定</h2><p>点击完成状态，记录大家的共识</p></div><button data-add="rule">＋ 添加公约</button></div><div id="allRules"></div></div></section>
+</main></div>
+<div class="modalback" id="modalback"><div class="modal"><div class="modalhead"><h3 id="modalTitle">新增记录</h3><button class="close" id="closeModal">✕</button></div><form id="recordForm"><div id="formFields"></div><div class="modal-actions"><button type="button" class="ghost" id="cancelModal">取消</button><button type="submit">保存记录</button></div></form></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const people=['小颜','阿杰','Mia'];
+const seed={
+ expenses:[
+ {name:'9 月水电费',date:'2026-09-28',payer:'阿杰',amount:286.5,status:'pending'},
+ {name:'客厅清洁用品',date:'2026-09-26',payer:'小颜',amount:89,status:'done'},
+ {name:'公共 Wi-Fi',date:'2026-09-20',payer:'Mia',amount:120,status:'done'},
+ {name:'厨房纸巾 & 垃圾袋',date:'2026-09-18',payer:'阿杰',amount:64,status:'pending'},
+ {name:'饮用水',date:'2026-09-15',payer:'小颜',amount:150,status:'done'},
+ {name:'9 月房租公共部分',date:'2026-09-01',payer:'Mia',amount:1800,status:'done'}
+ ],
+ cleaning:[
+ {date:'2026-10-09',area:'厨房台面',person:'小颜',done:false},
+ {date:'2026-10-10',area:'客厅地面',person:'阿杰',done:false},
+ {date:'2026-10-11',area:'卫生间',person:'Mia',done:false},
+ {date:'2026-10-12',area:'垃圾分类 & 清运',person:'小颜',done:false},
+ {date:'2026-10-13',area:'冰箱整理',person:'阿杰',done:false}
+ ],
+ supplies:[
+ {name:'抽纸',stock:1,threshold:2,buyer:'小颜'},
+ {name:'洗洁精',stock:0,threshold:1,buyer:'Mia'},
+ {name:'垃圾袋',stock:4,threshold:2,buyer:'阿杰'},
+ {name:'洗衣液',stock:2,threshold:1,buyer:'小颜'},
+ {name:'饮用水',stock:1,threshold:3,buyer:'阿杰'}
+ ],
+ rules:[
+ {title:'晚上 23:00 后保持安静',desc:'打电话、看视频请佩戴耳机，照顾室友休息。',done:true},
+ {title:'公共区域用完随手恢复整洁',desc:'厨房、卫生间和客厅使用后及时清理。',done:true},
+ {title:'公共支出当天登记，3 天内结清',desc:'先沟通再消费，大额支出提前征求大家意见。',done:true},
+ {title:'访客留宿提前在群内告知',desc:'尊重彼此的安全感与私人空间。',done:false},
+ {title:'公共物品遵循先到先用、用完登记',desc:'最后一位使用者发现不足时，及时登记补货。',done:true}
+ ]};
+let data;try{data=JSON.parse(localStorage.getItem('cohome_data'))||structuredClone(seed)}catch(e){data=JSON.parse(JSON.stringify(seed))}
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem('cohome_data',JSON.stringify(data));render()}
+function money(n){return '¥ '+Number(n).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2200)}
+function status(s){return `<span class="pill ${s==='done'?'done':'pending'}">${s==='done'?'已结清':'待结清'}</span>`}
+function go(view){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===view));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===view));const names={dashboard:['YOUR HOME, IN HARMONY','把合租生活，安排得明明白白。','账目清楚一点，室友关系就轻松一点。'],expenses:['SHARED EXPENSES','每一笔开支，都有迹可循。','公开透明的费用记录，让 AA 不再尴尬。'],cleaning:['CLEANING ROTA','家务轮流做，住得更舒服。','明确到人、明确到日期，少一点提醒，多一点默契。'],supplies:['SHARED SUPPLIES','公共物品，不再总是最后一个才发现。','库存有记录，补货有提醒，共用物品不再糊涂账。'],rules:['ROOMMATE AGREEMENT','把相处的默契，变成看得见的约定。','一起商量的规则，才更容易被每个人遵守。']};$('eyebrow').textContent=names[view][0];$('pageTitle').textContent=names[view][1];$('pageSub').textContent=names[view][2];window.scrollTo({top:0,behavior:'smooth'})}
+$('nav').addEventListener('click',e=>{let b=e.target.closest('[data-view]');if(b)go(b.dataset.view)});
+document.addEventListener('click',e=>{let g=e.target.closest('[data-go]');if(g)go(g.dataset.go);let a=e.target.closest('[data-add]');if(a)openModal(a.dataset.add)});
+function render(){
+ const total=data.expenses.reduce((s,x)=>s+Number(x.amount),0),pending=data.expenses.filter(x=>x.status==='pending').reduce((s,x)=>s+Number(x.amount),0);
+ $('totalExpense').textContent=money(total);$('statExpense').textContent=money(total/3);$('statPending').textContent=money(pending/3);$('statCleaning').textContent=data.cleaning.filter(x=>!x.done).length+' 项';$('statSupply').textContent=data.supplies.filter(x=>x.stock<=x.threshold).length+' 件';
+ $('recentExpenses').innerHTML=data.expenses.slice(0,4).map(x=>`<div class="rowitem"><div class="person">🧾</div><div class="itembody"><strong>${esc(x.name)}</strong><small>${esc(x.date)} · ${esc(x.payer)}垫付</small></div><div class="amount">${money(x.amount)}<small>${status(x.status)}</small></div></div>`).join('')||'<div class="empty">还没有费用记录</div>';
+ $('dashSchedule').innerHTML=data.cleaning.slice(0,3).map(dayHTML).join('')||'<div class="empty">暂无值日安排</div>';$('allSchedule').innerHTML=data.cleaning.map(dayHTML).join('')||'<div class="empty">暂无值日安排</div>';
+ $('dashSupplies').innerHTML=data.supplies.filter(x=>x.stock<=x.threshold).slice(0,3).map(s=>`<div class="supply"><div class="person">🧻</div><div class="itembody"><strong>${esc(s.name)} <span class="pill pending">需要补货</span></strong><small>库存 ${s.stock} · 提醒阈值 ${s.threshold}</small><div class="progress"><span style="width:${Math.max(5,Math.min(100,s.stock/Math.max(s.threshold,1)*100))}%"></span></div></div></div>`).join('')||'<div class="empty">库存充足，暂时不用补货 ✨</div>';
+ $('dashRules').innerHTML=data.rules.filter(x=>x.done).slice(0,3).map(ruleHTML).join('');
+ const search=($('expenseSearch')?.value||'').toLowerCase(),filter=$('expenseFilter')?.value||'all';
+ $('expenseRows').innerHTML=data.expenses.map((x,i)=>({...x,i})).filter(x=>(x.name+' '+x.payer).toLowerCase().includes(search)&&(filter==='all'||x.status===filter)).map(x=>`<tr><td>${esc(x.name)}</td><td>${esc(x.date)}</td><td>${esc(x.payer)}</td><td>${money(x.amount)}</td><td>${money(x.amount/3)}</td><td>${status(x.status)}</td><td><button class="small ghost" onclick="toggleExpense(${x.i})">${x.status==='done'?'改为待结清':'标记结清'}</button> <button class="small ghost" onclick="removeItem('expenses',${x.i})">删除</button></td></tr>`).join('')||'<tr><td colspan="7" class="empty">没有符合条件的记录</td></tr>';
+ $('supplyRows').innerHTML=data.supplies.map((x,i)=>`<tr><td>${esc(x.name)}</td><td>${x.stock}</td><td>${x.threshold}</td><td>${esc(x.buyer)}</td><td>${x.stock<=x.threshold?'<span class="pill pending">需要补货</span>':'<span class="pill done">库存充足</span>'}</td><td><button class="small ghost" onclick="changeStock(${i},-1)">−</button> <button class="small ghost" onclick="changeStock(${i},1)">＋</button> <button class="small ghost" onclick="removeItem('supplies',${i})">删除</button></td></tr>`).join('')||'<tr><td colspan="6" class="empty">还没有登记物品</td></tr>';
+ $('allRules').innerHTML=data.rules.map((x,i)=>ruleHTML(x,i,true)).join('')||'<div class="empty">还没有室友公约</div>';
+}
+function dayHTML(x,i){let d=new Date(x.date+'T12:00:00');return `<div class="day"><div class="datebox"><small>${['日','一','二','三','四','五','六'][d.getDay()]}</small><strong>${d.getDate()}</strong></div><div><div class="tasktitle">${esc(x.area)}</div><div class="taskmeta">负责人：${esc(x.person)} · ${esc(x.date)}</div></div><div>${x.done?'<span class="pill done">已完成</span>':`<button class="small" onclick="toggleCleaning(${i})">完成打卡</button>`}</div></div>`}
+function ruleHTML(x,i,interactive=false){return `<div class="rule"><div class="check" style="${x.done?'':'background:#f1f2f8;color:#999'}">${x.done?'✓':'·'}</div><div style="flex:1"><strong>${esc(x.title)}</strong><small>${esc(x.desc||'')}</small></div>${interactive?`<button class="small ghost" onclick="toggleRule(${i})">${x.done?'取消确认':'确认遵守'}</button> <button class="small ghost" onclick="removeItem('rules',${i})">删除</button>`:''}</div>`}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+window.toggleExpense=i=>{data.expenses[i].status=data.expenses[i].status==='done'?'pending':'done';save();toast('费用状态已更新')};window.toggleCleaning=i=>{data.cleaning[i].done=!data.cleaning[i].done;save();toast('值日状态已更新')};window.toggleRule=i=>{data.rules[i].done=!data.rules[i].done;save();toast('公约状态已更新')};window.changeStock=(i,n)=>{data.supplies[i].stock=Math.max(0,data.supplies[i].stock+n);save();toast('库存已更新')};window.removeItem=(type,i)=>{if(confirm('确定删除这条记录吗？')){data[type].splice(i,1);save();toast('已删除记录')}};
+$('expenseSearch').addEventListener('input',render);$('expenseFilter').addEventListener('change',render);
+$('quickAdd').addEventListener('click',()=>openModal('expense'));$('closeModal').onclick=$('cancelModal').onclick=()=> $('modalback').classList.remove('open');
+const fields={
+ expense:{title:'新增公共费用',fields:[['name','费用名称','text','例如：本月水电费'],['amount','总金额（元）','number','0.00'],['date','发生日期','date',''],['payer','垫付室友','select',people],['status','结清状态','select',[['pending','待结清'],['done','已结清']]]]},
+ cleaning:{title:'添加值日任务',fields:[['area','清洁区域 / 任务','text','例如：清理厨房'],['date','值日日期','date',''],['person','负责人','select',people]]},
+ supply:{title:'登记公共物品',fields:[['name','物品名称','text','例如：洗手液'],['stock','当前库存','number','0'],['threshold','提醒阈值','number','1'],['buyer','最近购买人','select',people]]},
+ rule:{title:'新增室友公约',fields:[['title','公约标题','text','例如：公共区域用后归位'],['desc','具体说明','textarea','写下约定的细节']]}
+};let currentType='';
+function openModal(type){currentType=type;let cfg=fields[type];$('modalTitle').textContent=cfg.title;$('formFields').innerHTML=cfg.fields.map(([name,label,kind,extra])=>{let el='';if(kind==='select'){let opts=Array.isArray(extra[0])?extra:extra.map(x=>[x,x]);el=`<select name="${name}">${opts.map(o=>`<option value="${esc(o[0])}">${esc(o[1])}</option>`).join('')}</select>`}else if(kind==='textarea')el=`<textarea name="${name}" rows="3" placeholder="${esc(extra)}"></textarea>`;else el=`<input name="${name}" type="${kind}" ${kind==='number'?'min="0" step="0.01"':''} ${kind==='date'?'required':''} placeholder="${esc(extra)}" ${name==='date'?`value="${new Date().toISOString().slice(0,10)}"`:''}>`;return `<label class="${name==='desc'?'wide':''}">${label}${el}</label>`}).join('');$('modalback').classList.add('open')}
+$('recordForm').addEventListener('submit',e=>{e.preventDefault();let obj=Object.fromEntries(new FormData(e.target).entries());if(currentType==='expense'){obj.amount=Number(obj.amount);if(!obj.name||!obj.amount||!obj.date){toast('请填写完整的费用信息');return}}if(currentType==='cleaning'&&!obj.area){toast('请填写清洁任务');return}if(currentType==='supply'){obj.stock=Number(obj.stock);obj.threshold=Number(obj.threshold)}if(currentType==='rule'){obj.done=false}data[{expense:'expenses',cleaning:'cleaning',supply:'supplies',rule:'rules'}[currentType]].unshift(obj);save();$('modalback').classList.remove('open');e.target.reset();toast('新增成功，已更新到生活管家')});
+render();
+</script>
+</body></html>
